@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `South Carolina Revenue and Fiscal Affairs Office`,
+    description: `Transforming data into solutions for South Carolina`,
+    author: `@robboskind`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -25,6 +25,12 @@ module.exports = {
         ],
         display: 'swap'
       }
+    },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // Add any options here
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
