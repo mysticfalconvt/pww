@@ -30,6 +30,9 @@ p{
 :hover  {
     background: #225089;
 }
+:active {
+    background: #142B47;
+}
 
 `;
 

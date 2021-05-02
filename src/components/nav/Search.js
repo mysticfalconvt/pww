@@ -39,6 +39,12 @@ button{
     font-family: "Open Sans";
     padding: .5rem 1rem;
     border: 3px solid white;
+    :hover{
+        background-color: #225089;
+    }
+    :active {
+        background: #142B47;
+    }
 }
 input{
     height: 50px;

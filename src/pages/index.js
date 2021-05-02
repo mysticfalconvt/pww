@@ -6,14 +6,17 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import BannerImage from "../components/BannerImage"
 import Cards from "../components/Cards"
+import PopularServices from "../components/PopularServices"
 
 export default function IndexPage({data}){
 const cardData = data.links.nodes;
+const links = data.units.nodes
  return(
   <Layout>
     <Seo title="Home" />
    <BannerImage />
    <Cards cards={cardData}/>
+   <PopularServices links={links}/>
   </Layout>
 )
  }
@@ -32,5 +35,16 @@ const cardData = data.links.nodes;
        }
      }
    }
+   units: allSanityUnit(sort: { fields: [UnitNumber], order: ASC }) {
+      nodes {
+        name
+        slug {
+          current
+        }
+        UnitNumber
+        
+      }
+    }
  }
 `;
+

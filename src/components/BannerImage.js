@@ -47,6 +47,9 @@ z-index: 0;
             :hover{
                 background-color: #225089;
             }
+            :active {
+                background: #142B47;
+            }
             
         }
         input{

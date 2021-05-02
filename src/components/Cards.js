@@ -46,14 +46,13 @@ const CardContainer = styled.div`
 export default function Cards({cards}) {
     return (
         <CardContainer>
-            {cards.map((card)=><Card singleCard={card} />)}
+            {cards.map((card)=><Card singleCard={card} key={card.id} />)}
         </CardContainer>
     )
 }
 
 
 function Card({singleCard}){
-console.log(singleCard)
 return(
     <div className="card">
         <div className="image">
