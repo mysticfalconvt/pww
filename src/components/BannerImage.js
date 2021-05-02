@@ -66,30 +66,30 @@ export default function BannerImage() {
     const [searchTerm, setSearchTerm] = useState("")
     return (
         <BannerImageStyles>
-           <div className="fullWidthImage">
+            <div className="fullWidthImage">
                 <StaticImage
                     src="../images/roof.jpg"
                     width={1920}
                     quality={95}
                     formats={["AUTO", "WEBP", "AVIF"]}
                     alt="roof photo"
-                    />
+                />
             </div>
             <div className="container">
                 <h2>
-                Providing insightful research, analysis, and resources to facilitate informed policy decisions and administration of services  
+                    Providing insightful research, analysis, and resources to facilitate informed policy decisions and administration of services
                 </h2>
                 <div className="search">
-                    <input 
+                    <input
                         type="text"
                         id="searchTerms"
                         placeholder="Enter search term"
                         value={searchTerm}
-                        onChange={(e)=>setSearchTerm(e.target.value)}
-                        />
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                    />
 
-                    <button type="button" onClick={()=> console.log(searchTerm)}>
-                            SEARCH <SearchIcon />
+                    <button type="button" onClick={() => console.log(searchTerm)}>
+                        SEARCH <SearchIcon />
                     </button>
                 </div>
             </div>

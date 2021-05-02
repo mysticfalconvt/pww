@@ -19,23 +19,33 @@ h2 {
   }
 }
 
+a {
+    text-decoration: none;
+    color: #0074c1;
+
+    :hover{
+        text-decoration: underline;
+    }
+}
+
 .linkContainer{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
+
 `;
 
-export default function PopularServices({links}) {
-  
+export default function PopularServices({ links }) {
+
     return (
         <PopularLinksStyles>
             <h2>Popular Services And Links</h2>
             <div className="linkContainer">
-                {links.map((unit)=>{
-                    return(
-                        <a key={unit.id} href={`http://boskind.tech/unit/${unit.slug.current}`}>{unit.UnitNumber} - {unit.name}</a>
-                        )
-                    })}
+                {links.map((unit) => {
+                    return (
+                        <a key={unit.id} href={`http://boskind.tech/unit/${unit.slug.current}`}>Unit # {unit.UnitNumber} - {unit.name}</a>
+                    )
+                })}
             </div>
         </PopularLinksStyles>
     )

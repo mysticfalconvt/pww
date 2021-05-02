@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import BurgerMenu from "./BurgerMenu"
-import {useState} from "react"
+import { useState } from "react"
 import TitleAndIcon from "./TitleAndIcon.js"
 import NavSearch from "./Search"
 
@@ -116,33 +116,33 @@ font-family: "Open Sans";
 `;
 
 export default function Header({ siteTitle }) {
-  const [openNav , setOpenNav] = useState(false)
+  const [openNav, setOpenNav] = useState(false)
   return (
-  <HeaderStyles>
-    <nav className="leftFlex">
-      <div className="left">
-        <BurgerMenu open={openNav} click={setOpenNav} />
-        <TitleAndIcon />
-      </div>
-      <div className="right">
-        <a href="/">About Us</a>
-        <a href="/">Events</a>
-        <a href="/">Boards & Committees</a>
-        <NavSearch></NavSearch>
-      </div>
-    </nav>
+    <HeaderStyles>
+      <nav className="leftFlex">
+        <div className="left">
+          <BurgerMenu open={openNav} click={setOpenNav} />
+          <TitleAndIcon />
+        </div>
+        <div className="right">
+          <a href="/">About Us</a>
+          <a href="/">Events</a>
+          <a href="/">Boards & Committees</a>
+          <NavSearch></NavSearch>
+        </div>
+      </nav>
 
-    {openNav && <BigNav />}
-    
-
+      {openNav && <BigNav />}
 
 
-  </HeaderStyles>
-)
-  };
 
-function BigNav(){
-  return(
+
+    </HeaderStyles>
+  )
+};
+
+function BigNav() {
+  return (
     <div className="bigNav">
       <div className="firstColumn">
         <a>Home</a>

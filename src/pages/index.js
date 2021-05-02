@@ -8,20 +8,20 @@ import BannerImage from "../components/BannerImage"
 import Cards from "../components/Cards"
 import PopularServices from "../components/PopularServices"
 
-export default function IndexPage({data}){
-const cardData = data.links.nodes;
-const links = data.units.nodes
- return(
-  <Layout>
-    <Seo title="Home" />
-   <BannerImage />
-   <Cards cards={cardData}/>
-   <PopularServices links={links}/>
-  </Layout>
-)
- }
+export default function IndexPage({ data }) {
+  const cardData = data.links.nodes;
+  const links = data.units.nodes
+  return (
+    <Layout>
+      <Seo title="Home" />
+      <BannerImage />
+      <Cards cards={cardData} />
+      <PopularServices links={links} />
+    </Layout>
+  )
+}
 
- export const query = graphql`
+export const query = graphql`
  query linksQuery {
    links: allSanityLinks(limit: 4) {
      nodes {
@@ -42,6 +42,7 @@ const links = data.units.nodes
           current
         }
         UnitNumber
+        Link
         
       }
     }

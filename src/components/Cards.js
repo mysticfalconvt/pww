@@ -43,27 +43,26 @@ const CardContainer = styled.div`
     }
 `;
 
-export default function Cards({cards}) {
+export default function Cards({ cards }) {
     return (
         <CardContainer>
-            {cards.map((card)=><Card singleCard={card} key={card.id} />)}
+            {cards.map((card) => <Card singleCard={card} key={card.id} />)}
         </CardContainer>
     )
 }
 
 
-function Card({singleCard}){
-return(
-    <div className="card">
-        <div className="image">
-            <img src={singleCard.image.asset.url} />
+function Card({ singleCard }) {
+    return (
+        <div className="card">
+            <div className="image">
+                <img src={singleCard.image.asset.url} />
+            </div>
+            <h3>{singleCard.name}</h3>
         </div>
-        <h3>{singleCard.name}</h3>
-    </div>
-)
+    )
 }
 
 
 
 
- 

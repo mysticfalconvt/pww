@@ -36,21 +36,21 @@ p{
 
 `;
 
-export default function BurgerMenu({open, click}) {
+export default function BurgerMenu({ open, click }) {
     return (
-        <BurgerStyles onClick={()=>click(!open)}>
+        <BurgerStyles onClick={() => click(!open)}>
 
-                {!open && 
+            {!open &&
                 <>
                     <MenuIcon></MenuIcon>
                     <p>MENU</p>
                 </>}
-                {open && 
+            {open &&
                 <>
                     <CloseIcon></CloseIcon>
                     <p>CLOSE</p>
                 </>}
-                
+
         </BurgerStyles>
     )
 }

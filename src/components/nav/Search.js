@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import {FaSearch} from 'react-icons/fa'
+import { FaSearch } from 'react-icons/fa'
 
 const SearchIcon = styled(FaSearch)`
 width: 40px;
@@ -56,19 +56,19 @@ input{
 function SearchBox() {
     const [searchTerm, setsearchTerm] = useState("")
 
-    return(
+    return (
         <SearchBoxStyles>
-           
-            <input 
+
+            <input
                 type="text"
                 id="searchTerms"
                 placeholder="Enter search term"
                 value={searchTerm}
-                onChange={(e)=>setsearchTerm(e.target.value)}
+                onChange={(e) => setsearchTerm(e.target.value)}
             />
 
-                <button type="button" onClick={()=> console.log(searchTerm)}>
-                        SEARCH
+            <button type="button" onClick={() => console.log(searchTerm)}>
+                SEARCH
                 </button>
 
         </SearchBoxStyles>

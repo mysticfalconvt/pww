@@ -20,8 +20,8 @@ export default function TitleAndIcon() {
                     quality={95}
                     formats={["AUTO", "WEBP", "AVIF"]}
                     alt="logo"
-                    style={{margin: "10px"}}
-                    />
+                    style={{ margin: "10px" }}
+                />
             </div>
             <TitleTextStyles >
 
